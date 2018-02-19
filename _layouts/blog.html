@@ -9,20 +9,24 @@
 			<div class="container">
 				{% include blog_intro.html %}
 			</div>
-			<ul>
-				{% for post in site.posts %}
-					<div class="col-md-4">
-						<div class="blog-item">
-							<li>
-								<div class="card features">
-									<img class="card-img-top image" src="{{ site.baseurl }}/assets/images/{{ post.image }}" alt="blog image">
-									<a href="{{ post.url | prepend: site.baseurl }}"><h4 class="card-title post-title">{{ post.title }}</h4></a>
-									<a href="{{ post.url | prepend: site.baseurl }}"><p class="card-text intro"> {{ post.excerpt | truncatewords: 50 | remove: '<p>' | remove: '</p>'}} </p></a>
-								<div class="post-meta"><span class="post-meta">{{ post.author }} </span> | <span class="published-date">{{ post.date | date: "%b %-d, %Y" }}</span></div>
-							</li>
-						</div>
+			<ul style="list-style: none;">
+				<div class="container">
+					<div class="row">	
+						{% for post in site.posts %}
+							<div class="col-md-4">
+								<div class="blog-item">
+									<li>
+										<div class="card features">
+											<img class="card-img-top image" src="{{ site.baseurl }}/assets/images/{{ post.image }}" alt="blog image">
+											<a href="{{ post.url | prepend: site.baseurl }}"><h4 class="card-title post-title">{{ post.title }}</h4></a>
+											<a href="{{ post.url | prepend: site.baseurl }}"><p class="card-text intro"> {{ post.excerpt | truncatewords: 50 | remove: '<p>' | remove: '</p>'}} </p></a>
+										<div class="post-meta"><span class="post-meta">{{ post.author }} </span> | <span class="published-date">{{ post.date | date: "%b %-d, %Y" }}</span></div>
+									</li>
+								</div>
+							</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
+				</div>
 			</ul>
 		</div>
 		{% include contact.html %}
