@@ -2,7 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2018-02-17 13:00:23 +0300
-categories: jekyll update
+categories: business
 image: star.jpg
 author: John Mutinda
 ---

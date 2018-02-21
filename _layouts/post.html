@@ -8,8 +8,9 @@
 		<div class="container">
 			{% include blog_nav.html %}
 			<header class="post-header">
+				<!-- <img class="card-img-top image" src="{{ site.baseurl }}/assets/images/star.jpg" alt="blog image"> -->
 				<h1 class="mb-3" itemprop="name headline">{{ page.title | escape }}</h1>
-				<p class="post-meta">
+				<p class="post-meta-page">
 					<time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 					{% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
 					{{ page.date | date: date_format }}
@@ -21,6 +22,8 @@
 				<div class="post-content e-content" itemprop="articleBody">
 					{{ content }}
 				</div>
+				<hr>
+				<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
 				{% if site.disqus.shortname %}
 					{% include disqus_comments.html %}
 				{% endif %}

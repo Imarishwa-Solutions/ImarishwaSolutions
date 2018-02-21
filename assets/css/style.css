@@ -26,12 +26,13 @@ body {
 }
 
 a {
-    color: #e38cb7;
+    color: #1a345d;
 }
 
 a:hover,
 a:focus {
-    color: #d6619c;
+    color: #ff5252;
+    text-decoration: none;
 }
 
 h1 {
@@ -171,6 +172,11 @@ p.lead {
 .nav-menu {
     padding: 1rem 0;
     transition: all 0.3s ease;
+    background: -moz-linear-gradient(135deg, rgb(26, 52, 93) 0%, rgb(255, 82, 82) 100%);
+    background: -webkit-linear-gradient(135deg, rgb(26, 52, 93) 0%, rgb(255, 82, 82) 100%);
+    background: linear-gradient(135deg, rgb(26, 52, 93) 0%, rgb(255, 82, 82) 100%);
+    -webkit-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 23px 0px rgba(0, 0, 0, 0.1);
 }
 .nav-menu.blog {
     padding: 0;
@@ -239,7 +245,11 @@ a.intro{
     cursor: pointer;
 }
 .post-header{
-    color: #ff5252;
+    color: #ffffff;
+    /*background: linear-gradient( 135deg, rgba(26, 52, 93, 1) 0%, rgba(255, 82, 82, 1) 100%);
+    background-image: url();*/
+    background-image: url(../images/header.png);
+    padding-bottom: 30px;
 }
 .share-links{
     position: absolute;
@@ -250,6 +260,9 @@ a.intro{
     line-height: 35px;
     text-align: right;
 }
+.post-content {
+    margin-top: 20px;
+}
 
 .post-meta{
     padding: 20px 0 0;
@@ -257,6 +270,12 @@ a.intro{
     margin-bottom: 20px;
     margin-left: 20px;
     position: relative;
+}
+.post-meta-page{
+    color: #ffffff;
+    font-size: 14px;
+    padding-bottom: 10px;
+
 }
 .content{
     text-align: justify;
@@ -281,16 +300,20 @@ a.intro{
 .post-title{
     align-self: center;
     text-align: center;
+    padding-top: 20px;
 
 }
 
 .masterhead{
     background-image: url('{{ site.baseurl }}/assets/images/{{ post.image }}');
 }
+
+
 /* HERO
 ----------------------*/
 
 header {
+    margin-top: 75px;
     padding: 100px 0 0;
     text-align: center;
     color: #FFF;
@@ -376,8 +399,9 @@ header {
 }
 
 .card-text {
-    font-size: 14px;
-    padding-left: 10px;
+    text-align: justify;
+    font-size: 12px;
+    padding-left: 20px;
     padding-right: 20px;
 }
 
