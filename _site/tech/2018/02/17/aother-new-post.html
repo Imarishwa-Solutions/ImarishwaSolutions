@@ -19,24 +19,6 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/themify-icons.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/owl.carousel.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-  <div class="sticky-container">
-  <script>
-  window.fbMessengerPlugins = window.fbMessengerPlugins || {
-  init : function() { FB.init({ appId: "1678638095724206", xfbml: true, version: "v2.6" }); }, callable : [] };
-  window.fbAsyncInit = window.fbAsyncInit ||
-  function() { window.fbMessengerPlugins.callable.forEach(
-  function( item ) { item(); } ); window.fbMessengerPlugins.init(); }; setTimeout(
-  function() { (
-  function(d, s, id){
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {
-  return; }
-  js = d.createElement(s);
-  js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js";
-  fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'facebook-jssdk')); }, 0);
-  </script>
-  </div>
 </head>
 		<title></title>
 	</head>
@@ -135,6 +117,23 @@
 </footer>
 <!-- jQuery and Bootstrap -->
 <!-- <script data-cfasync="false" src="../../cdn-cgi/scripts/af2821b0/cloudflare-static/email-decode.min.js"></script> -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId            : '1678638095724206',
+      autoLogAppEvents : true,
+      xfbml            : true,
+      version          : 'v2.12'
+    });
+  };
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <script src="/assets/js/jquery-3.2.1.min.js"></script>
 <script src="/assets/js/bootstrap.bundle.min.js"></script>
 <!-- Plugins JS -->
